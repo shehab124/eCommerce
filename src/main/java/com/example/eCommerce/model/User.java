@@ -25,7 +25,8 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "\"user\"")
-public class User implements UserDetails {
+public class User //implements UserDetails
+{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,9 +47,9 @@ public class User implements UserDetails {
     private Cart cart;
 
 
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return List.of();
-	}
+//	@Override
+//	public Collection<? extends GrantedAuthority> getAuthorities() {
+//		return List.of();
+//	}
 
 }
