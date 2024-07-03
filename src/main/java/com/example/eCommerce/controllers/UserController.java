@@ -48,6 +48,9 @@ public class UserController {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		Cart cart = new Cart();
+
+
+
 		cartRepository.save(cart);
 		user.setCart(cart);
 
