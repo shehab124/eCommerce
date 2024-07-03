@@ -40,6 +40,8 @@ public class UserController {
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
+		if (user != null) log.info("User {} found ", username);
+		else log.error("User {} not found!", username);
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
 	
@@ -47,10 +49,10 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
+
+		log.info("User name set with {}", createUserRequest.getUsername());
+
 		Cart cart = new Cart();
-
-
-
 		cartRepository.save(cart);
 		user.setCart(cart);
 
@@ -63,6 +65,7 @@ public class UserController {
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 
 		userRepository.save(user);
+		log.info("User Created successfully with username {}", createUserRequest.getUsername());
 		return ResponseEntity.ok(user);
 	}
 	
