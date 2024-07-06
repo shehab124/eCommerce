@@ -3,8 +3,9 @@ package com.example.eCommerce.controllers;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ import com.example.eCommerce.model.requests.ModifyCartRequest;
 @RequestMapping("/api/cart")
 public class CartController {
 
-	private static final Logger log = LoggerFactory.getLogger(CartController.class);
+	Logger log = LogManager.getLogger(CartController.class);
 
 	@Autowired
 	private UserRepository userRepository;
