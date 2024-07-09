@@ -396,3 +396,13 @@ insert into "user" (cart_id,password,username,id) values (?,?,?,default) [23505-
 2024-07-10 01:07:20,031 INFO c.e.e.ECommerceApplication [main] Ecommerce Application started!
 2024-07-10 01:07:58,826 INFO c.e.e.c.UserController [http-nio-8080-exec-2] User name set with chehab10
 2024-07-10 01:07:59,280 INFO c.e.e.c.UserController [http-nio-8080-exec-2] User Created successfully with username chehab10
+2024-07-10 01:15:41,191 INFO c.e.e.ECommerceApplication [main] Starting ECommerceApplication using Java 22.0.1 with PID 10108 (D:\Java Web Developer\eCommerce\target\classes started by cheha in D:\Java Web Developer\eCommerce)
+2024-07-10 01:15:41,204 DEBUG c.e.e.ECommerceApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-10 01:15:41,206 INFO c.e.e.ECommerceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 01:15:47,239 DEBUG c.e.e.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2024-07-10 01:15:48,242 INFO c.e.e.ECommerceApplication [main] Started ECommerceApplication in 7.629 seconds (process running for 9.087)
+2024-07-10 01:15:48,246 INFO c.e.e.ECommerceApplication [main] Ecommerce Application started!
+2024-07-10 01:15:54,654 INFO c.e.e.c.UserController [http-nio-8080-exec-4] User name set with chehab10
+2024-07-10 01:15:54,873 INFO c.e.e.c.UserController [http-nio-8080-exec-4] User Created successfully with username chehab10
+2024-07-10 01:16:01,229 INFO c.e.e.c.UserController [http-nio-8080-exec-3] User name set with chehab0
+2024-07-10 01:16:01,313 INFO c.e.e.c.UserController [http-nio-8080-exec-3] User Created successfully with username chehab0
