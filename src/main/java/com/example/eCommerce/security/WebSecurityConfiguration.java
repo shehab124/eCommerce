@@ -3,6 +3,7 @@ package com.example.eCommerce.security;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -14,6 +15,7 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 
 @Configuration
 @EnableWebSecurity
@@ -21,11 +23,14 @@ public class WebSecurityConfiguration {
 
     private final UserDetailsServiceImpl userDetailsService;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private final CustomAccessDeniedHandler accessDeniedHandler;
 
     public WebSecurityConfiguration(UserDetailsServiceImpl userDetailsService,
-                                    BCryptPasswordEncoder bCryptPasswordEncoder) {
+                                    BCryptPasswordEncoder bCryptPasswordEncoder,
+                                    CustomAccessDeniedHandler accessDeniedHandler) {
         this.userDetailsService = userDetailsService;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+        this.accessDeniedHandler = accessDeniedHandler;
     }
 
     @Bean
@@ -37,6 +42,9 @@ public class WebSecurityConfiguration {
                         .requestMatchers(HttpMethod.POST, SecurityConstants.SIGN_UP_URL).permitAll()
                         .anyRequest().authenticated()
                 )
+                .userDetailsService(userDetailsService)
+                .exceptionHandling(e -> e.accessDeniedHandler(accessDeniedHandler)
+                                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )

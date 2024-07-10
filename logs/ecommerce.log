@@ -422,3 +422,22 @@ insert into "user" (cart_id,password,username,id) values (?,?,?,default) [23505-
 2024-07-10 14:48:27,204 INFO c.e.e.ECommerceApplication [main] Ecommerce Application started!
 2024-07-10 14:48:33,181 INFO c.e.e.c.UserController [http-nio-8080-exec-2] User name set with chehab0
 2024-07-10 14:48:33,427 INFO c.e.e.c.UserController [http-nio-8080-exec-2] User Created successfully with username chehab0
+2024-07-10 16:48:01,804 INFO c.e.e.ECommerceApplication [main] Starting ECommerceApplication using Java 22.0.1 with PID 18204 (D:\Java Web Developer\eCommerce\target\classes started by cheha in D:\Java Web Developer\eCommerce)
+2024-07-10 16:48:01,828 DEBUG c.e.e.ECommerceApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-10 16:48:01,831 INFO c.e.e.ECommerceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 16:48:07,593 DEBUG c.e.e.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2024-07-10 16:48:08,623 INFO c.e.e.ECommerceApplication [main] Started ECommerceApplication in 7.641 seconds (process running for 13.081)
+2024-07-10 16:48:08,627 INFO c.e.e.ECommerceApplication [main] Ecommerce Application started!
+2024-07-10 16:48:11,977 ERROR c.e.e.c.UserController [http-nio-8080-exec-1] User chehab4 not found!
+2024-07-10 16:48:16,566 ERROR c.e.e.c.UserController [http-nio-8080-exec-3] User chehab4 not found!
+2024-07-10 16:48:18,356 ERROR c.e.e.c.UserController [http-nio-8080-exec-4] User chehab4 not found!
+2024-07-10 16:48:38,486 ERROR c.e.e.c.UserController [http-nio-8080-exec-6] User chehab4 not found!
+2024-07-10 17:01:57,044 INFO c.e.e.ECommerceApplication [main] Starting ECommerceApplication using Java 22.0.1 with PID 14720 (D:\Java Web Developer\eCommerce\target\classes started by cheha in D:\Java Web Developer\eCommerce)
+2024-07-10 17:01:57,069 DEBUG c.e.e.ECommerceApplication [main] Running with Spring Boot v3.3.0, Spring v6.1.8
+2024-07-10 17:01:57,072 INFO c.e.e.ECommerceApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-07-10 17:02:04,934 DEBUG c.e.e.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2024-07-10 17:02:05,853 INFO c.e.e.ECommerceApplication [main] Started ECommerceApplication in 9.975 seconds (process running for 12.387)
+2024-07-10 17:02:05,857 INFO c.e.e.ECommerceApplication [main] Ecommerce Application started!
+2024-07-10 17:02:13,535 INFO c.e.e.c.UserController [http-nio-8080-exec-4] User name set with chehab0
+2024-07-10 17:02:13,768 INFO c.e.e.c.UserController [http-nio-8080-exec-4] User Created successfully with username chehab0
+2024-07-10 17:02:54,235 INFO c.e.e.c.UserController [http-nio-8080-exec-3] User chehab0 found 
